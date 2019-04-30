@@ -1,6 +1,8 @@
 # Block Editor Sandbox
 
-This plugin registers a `Sandbox` posttype preset with a template including many common/core blocks in diverse configurations. It requires zero configuration to start utilizing.
+[![Latest Stable Version](https://poser.pugx.org/tiny-pixel/block-sandbox/v/stable)](https://packagist.org/packages/tiny-pixel/block-sandbox) [![Total Downloads](https://poser.pugx.org/tiny-pixel/block-sandbox/downloads)](https://packagist.org/packages/tiny-pixel/block-sandbox) [![License](https://poser.pugx.org/tiny-pixel/block-sandbox/license)](https://packagist.org/packages/tiny-pixel/block-sandbox)
+
+This plugin registers a `Sandbox` posttype preset with a template including many common/core blocks in diverse arrangements. It requires zero configuration to start utilizing.
 
 It was inspired by `coblocks/block-unit-test` (now `godaddy/block-unit-test` ðŸ˜¬).
 
@@ -15,7 +17,7 @@ It was inspired by `coblocks/block-unit-test` (now `godaddy/block-unit-test` ðŸ˜
 ## Simple usage
 
 ```console
-$ composer require tiny-pixel\block-sandbox
+$ composer require tiny-pixel/block-sandbox
 $ wp plugin activate block-sandbox
 ```
 
@@ -100,7 +102,7 @@ add_action('init', function () use ($label) {
 });
 ```
 
-So, in conjunction:
+### All of the above
 
 ```php
 add_action('init', function () use ($template, $extra, $posttype) {
@@ -116,4 +118,4 @@ add_action('init', function () use ($template, $extra, $posttype) {
 
 ## License
 
-MIT License. Happy hacking!
+[MIT License](https://github.com/kellymears/block-testing/blob/master/LICENSE.md). Happy hacking!

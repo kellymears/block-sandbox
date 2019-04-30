@@ -126,6 +126,7 @@ class Sandbox
 
     /**
      * Apply template
+     *
      * @param  void
      * @return self
      */
