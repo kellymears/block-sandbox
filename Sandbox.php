@@ -5,65 +5,147 @@ namespace TinyPixel\BlockTools;
 use Silk\PostType\Builder;
 
 /**
- * Sandbox class
+ * Sandbox
  *
- * Creates sandbox posttype,
- * inserts and updates sandbox post
- */
+ * Registers posttype and posttype template
+ *
+ * @author  Kelly Mears <developers@tinypixel.dev>
+ * @license MIT <https://opensource.org/licenses/MIT>
+ **/
 class Sandbox
 {
     /**
-     * @var int post_id
+     * Posttype id
+     * @var string
      */
-    public $id;
+    private $posttype_id = 'sandbox';
 
     /**
-     * @var string title
+     * Posttype label
+     * @var string
      */
-    public $posttype  = 'sandbox';
+    private $posttype_label = 'Sandbox';
 
     /**
-     * @var string label
+     * Posttype plural label
+     * @var string plural
      */
-    public $posttype_label = 'Sandbox';
+    private $posttype_plural = 'Sandboxes';
 
     /**
-     * @var string plural label
+     * Posttype
+     * @var object silk builder instance
      */
-    public $posttype_plural = 'Sandboxes';
+    private $posttype;
 
     /**
+     * Posttype template
      * @var array template
      */
-    public $template = [];
+    private $template;
 
+    /**
+     * Construct
+     *
+     * @param  void
+     * @return self
+     */
     public function __construct()
     {
-        $this->template = (array) require dirname(__FILE__) .'/Blocks.php';
+        $this->template = require dirname(__FILE__) . '/Blocks.php';
 
         return $this;
     }
 
     /**
-     * Register Sandbox CPT
+     * Set Posttype label
+     *
+     * @param  array label
+     * @return self
+     */
+    public function setLabel(array $label)
+    {
+        $label = (object) $label;
+        $this->posttype_id = $label->id;
+        $this->posttype_label = $label->singular;
+        $this->posttype_plural = $label->plural;
+
+        return $this;
+    }
+
+    /**
+     * Initialize builder instance
      *
      * @param  void
      * @return self
      */
-    public function createSandbox()
+    public function create()
     {
-        $sandbox = Builder::make($this->posttype);
+        $this->sandbox = Builder::make($this->posttype_id);
 
-        $sandbox
-                ->closed()
-                ->withUI()
-                ->oneIs($this->posttype_label)
-                ->manyAre($this->posttype_plural)
-                ->supports('editor', 'title')
-                ->set('has_archive', true)
-                ->set('show_in_rest', true)
-                ->set('template', $this->template);
+        $this->sandbox
+             ->open()
+             ->withUI()
+             ->oneIs($this->posttype_label)
+             ->manyAre($this->posttype_plural)
+             ->supports('editor', 'title')
+             ->set('has_archive', true)
+             ->set('show_in_rest', true)
+             ->set('template', $this->template);
 
-        return $sandbox->register();
+         return $this;
+    }
+
+    /**
+     * Append blocks
+     *
+     * @param  array blocks
+     * @return self
+     */
+    public function appendBlocks($blocks)
+    {
+        $this->template = array_merge($this->template, $blocks);
+
+        return $this;
+    }
+
+    /**
+     * Set template
+     *
+     * @param  array template
+     * @return self
+     */
+    public function setTemplate(array $template)
+    {
+        $this->template = $template;
+
+        $this->sandbox->set('template', $this->template);
+
+        return $this;
+    }
+
+    /**
+     * Apply template
+     * @param  void
+     * @return self
+     */
+    public function applyTemplate()
+    {
+        $this->sandbox->set('template', $this->template);
+
+        return $this;
+    }
+
+    /**
+     * Register posttype
+     *
+     * @param  void
+     * @return void
+     */
+    public function register()
+    {
+        $this->sandbox->register();
+
+        return $this;
     }
 }

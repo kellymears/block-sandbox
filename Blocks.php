@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @link https://design.oit.ncsu.edu/docs/gutenberg/block-attributes/
- */
+ * Default block template
+ **/
 return [
 
     /**
@@ -36,7 +36,6 @@ return [
      * Cover Wide
      */
     ['core/cover', [
-        'id'      => 9999,
         'align'   => 'wide',
         'url'     => 'https://source.unsplash.com/random/1600x798',
         'title'   => 'Wide alignment image block']],
@@ -45,7 +44,6 @@ return [
      * Cover Full
      */
     ['core/cover', [
-        'id'      => 9999,
         'align'   => 'full',
         'url'     => 'https://source.unsplash.com/random/1600x797',
         'title'   => 'Full alignment image block']],

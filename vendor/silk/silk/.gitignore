@@ -1,6 +1,0 @@
-/vendor/
-/wordpress/
-/build/logs/
-composer.lock
-.idea
-*.phar
