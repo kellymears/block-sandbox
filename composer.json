@@ -1,0 +1,30 @@
+{
+  "name": "tiny-pixel/block-tools",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "description": "Block testing for meticulous WordPress creatives",
+  "homepage": "https://tinypixel.dev",
+  "authors": [
+    {
+      "name": "Kelly Mears",
+      "email": "developers@tinypixel.dev",
+      "homepage": "https://github.com/kellymears"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "gutenberg"
+  ],
+  "autoload": {
+    "psr-4": {
+      "TinyPixel\\BlockTools\\": "",
+      "Silk\\": ""
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "composer/installers": "^1.0",
+    "silk/silk": "^0.12.1"
+  }
+}
