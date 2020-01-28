@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Default block template
- **/
+ * Blocks lab.
+ */
 return [
 
     /**
@@ -99,7 +99,29 @@ return [
      * Paragraph
      **/
     ['core/paragraph', [
-        'content' => "It’s the mornings after the spider-and-heights dreams that are the most painful, that it takes sometimes three coffees and two showers and sometimes a run to loosen the grip on his soul’s throat; and these post-dream mornings are even worse if he wakes unalone, if the previous night’s Subject is still there, wanting to twitter, or to cuddle and, like, spoon, asking what exactly is the story with the foggy inverted tumblers on the bathroom floor, commenting on his night-sweats, clattering around in the kitchen, making kippers or bacon or something more hideous and unhoneyed he’s supposed to eat with post-coital male gusto, the ones who have this thing about they call it Feeding My Man, wanting a man who can barely keep down A.M. honey-toast to east with male gusto, elbows out and sovelling, making little noises. Even when alone, unable to uncurl alone and sit slowly up and wing out the sheet and go to the bathroom, these darkest mornings start days that Orin can’t even bring himself for hours to think about how he’ll get through the day. These worst mornings with cold floors and hot windows and merciless light — the soul’s certainty that the day will have to be not traversed but sort of climbed, vertically, and then that going to sleep again at the end of it will be like falling, again, off something tall and sheer."]],
+        'content' => "It’s the mornings after the spider-and-heights
+            dreams that are the most painful, that it takes sometimes
+            three coffees and two showers and sometimes a run to loosen
+            the grip on his soul’s throat; and these post-dream mornings
+            are even worse if he wakes unalone, if the previous night’s
+            Subject is still there, wanting to twitter, or to cuddle
+            and, like, spoon, asking what exactly is the story with
+            the foggy inverted tumblers on the bathroom floor,
+            commenting on his night-sweats, clattering around in
+            the kitchen, making kippers or bacon or something more
+            hideous and unhoneyed he’s supposed to eat with post-coital
+            male gusto, the ones who have this thing about they call
+            it Feeding My Man, wanting a man who can barely keep down
+            A.M. honey-toast to east with male gusto, elbows out and
+            sovelling, making little noises. Even when alone, unable to
+            uncurl alone and sit slowly up and wing out the sheet and go
+            to the bathroom, these darkest mornings start days that Orin
+            can’t even bring himself for hours to think about how he’ll
+            get through the day. These worst mornings with cold floors
+            and hot windows and merciless light — the soul’s certainty
+            that the day will have to be not traversed but sort of climbed,
+            vertically, and then that going to sleep again at the end of
+            it will be like falling, again, off something tall and sheer."]],
 
     /**
      * Gallery (1x3)
@@ -119,17 +141,11 @@ return [
         'value'    => "<p>“What people don’t get about being hideously or improbably deformed is that the urge to hide is offset by a gigantic sense of shame about your urge to hide.”</p>",
         'citation' => 'Madame Psychosis']],
 
-    /**
-     * Vimeo
-     */
     ['core-embed/vimeo', [
         'caption' => '<em>écoute: El Guincho</em>',
         'align'   => 'wide',
         'url'     => 'https://vimeo.com/70237487']],
 
-    /**
-     * Columns > Column
-     */
     ['core/columns', [], [
         ['core/column', [], [
             ['core/image', [
@@ -142,35 +158,23 @@ return [
         ]],
     ]],
 
-    /**
-     * YouTube
-     */
     ['core-embed/youtube', [
         'caption' => 'Youtube embed block test',
         'align'   => 'center',
         'url'     => 'https://www.youtube.com/watch?v=oHg5SJYRHA0']],
 
-    /**
-     * Paragraph
-     */
     ['core/paragraph', [
         'content' => "I consume libraries. I wear out spines and ROM-drives. I do things like get in a taxi and say, “The library and step on it.” My instincts concerning syntax and mechanics are better than your own, I can tell, with due respect. But it transcends the mechanics. I’m not a machine. I feel and believe. I have opinions. Some of them are interesting. I could, if you’d let me, talk and talk. Let’s talk about anything. I believe the influence of Kierkegaard on Camus is underestimated. I believe Dennis Gabor may very well have been the Antichrist. I believe Hobbes is just Rousseau in a dark mirror. I believe, with Hegel, that transcendence is absorption. I could interface you guys right under the table,’ I say. ‘I’m not just a creatus, manufactured, conditioned, bred for a function.’"]],
 
-    /**
-     * Pullquote
-     */
     ['core/pullquote', [
         'value'    => "<p>“He wakes up soaked, fetally curled, entombed in that kind of psychic darkness where you’re dreading whatever you think of.”</p>",
         'citation' => 'Madame Psychosis',
         'align'    => 'full']],
 
-    /**
-     * Gallery (3x2)
-     */
     ['core/gallery', [
-        'align'    => 'full',
-        'columns'  => 3,
-        'images'   => [
+        'align'   => 'full',
+        'columns' => 3,
+        'images'  => [
             ['url' => 'https://source.unsplash.com/random/1200x600'],
             ['url' => 'https://source.unsplash.com/random/1200x599'],
             ['url' => 'https://source.unsplash.com/random/1200x598'],
@@ -178,21 +182,18 @@ return [
             ['url' => 'https://source.unsplash.com/random/1200x596'],
             ['url' => 'https://source.unsplash.com/random/1200x595']]]],
 
-    /**
-     * Pullquote
-     */
     ['core/pullquote', [
-        'value'     => "<p>“The United States: a community of sacred individuals which reveres the sacredness of the individual choice. The individual’s right to pursue his own vision of the best ratio of pleasure to pain: utterly sacrosanct.”</p>",
-        'citation'  => 'Madame Psychosis',
-        'align'     => 'full']],
+        'value'    => "<p>“The United States: a community of sacred individuals which reveres the sacredness of the individual choice. The individual’s right to pursue his own vision of the best ratio of pleasure to pain: utterly sacrosanct.”</p>",
+        'citation' => 'Madame Psychosis',
+        'align'    => 'full']],
 
     /**
      * Gallery (2x3)
      */
     ['core/gallery', [
-        'align'    => 'full',
-        'columns'  => 2,
-        'images'   => [
+        'align'   => 'full',
+        'columns' => 2,
+        'images'  => [
             ['url' => 'https://source.unsplash.com/random/1200x594'],
             ['url' => 'https://source.unsplash.com/random/1200x593'],
             ['url' => 'https://source.unsplash.com/random/1200x592'],
