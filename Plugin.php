@@ -106,7 +106,7 @@ function checkRewriteRules()
 /**
  * Flush rewrite rules and remove rewrite flag
  */
-function flushRules()
+function flushRewriteRules()
 {
     flush_rewrite_rules();
 
